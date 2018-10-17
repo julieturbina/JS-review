@@ -99,3 +99,87 @@ if ( a !== b ) {
     theNumbersMatch = false;
 }
     console.log(theNumbersMatch);
+
+    // and &&
+
+    // if ( a == b && c ==d ) {}
+    // // or ||
+    // if ( a == b || c ==d ) {}
+    // //X OR
+    // if (( a == b || c == d ) && ( a == b) != (c == d)) {}
+
+//TERNARY OPERATOR  (if condition is true - do this - else do this)
+
+// (if) a == b ?  (do this) console.log("Match") : (else) console.log("No Match")
+
+            // ARRAYS (ARE OBJECTS)
+ var pens;
+
+ pens = ["red", "blue", "another color"];
+ console.log(pens);
+
+ var morePens = ["red", "blue", "another color", 5, false];
+ console.log(morePens);
+
+ //index starts at 0
+
+ var secondPen = pens[1];
+ console.log(secondPen);
+
+
+
+ //  PROPERTIES AND METHODS
+
+
+var pens;
+pens = ["red", "blue", "green", "orange"];
+
+console.log("Before: ", pens);
+
+// PROPERTIES:
+// Get a property of an object by name:
+
+console.log("Array length: ", pens.length);
+
+// METHODS:  Call the object then punctuation mark, then call the method ending with parenthesis: myarray.reverse()
+// Reverse the array: var newPens = pens.slice();
+pens.reverse();
+
+// Remove the first value of the array:
+pens.shift();
+
+// Add comma-separated list of values to the front of the array:
+pens.unshift("purple", "black");
+
+// Remove the last value of the array:
+pens.pop();
+
+// Add comma-separated list of values to the end of the array:
+pens.push("pink", "prussian blue");
+
+// Find the specified position (pos) and remove n number of items from the array. Arguments: pens.splice(pos,n):
+// pens.splice(pos, n) // Starts at the seccond item and removes two items.
+pens.splice(2, 1);
+console.log("After: ", pens);
+
+// Create a copy of an array. Typically assigned to a new variable:
+var newPens = pens.slice();
+console.log("New pens: ", newPens);
+
+newPens.push("sky blue");
+
+// Return the first element that matches the search parameter after the specified index position. Defaults to index position 0. Arguments: pens.indexOf(search, index):
+// var result = pens.indexOf(search, index);
+var result = pens.indexOf("blue", 1);
+console.log("The search result index is: ", result);        // =2
+console.log("The value is: ", pens[result]);            // blue
+
+
+
+// Return the items in an array as a comma separated string. The separator argument can be used to change the comma to something else. Arguments: pens.join(separator):
+// var arrayString = pens.join(separator);
+var arrayString = pens.join(" & ");
+console.log("String from array: ", arrayString);
+
+// MDN documentation for Array:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
