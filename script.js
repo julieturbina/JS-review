@@ -258,3 +258,17 @@ findBiggestFraction(firstFraction, secondFraction);
 findBiggestFraction(2/3, 1/4);
 findBiggestFraction(7/16, 13/25);
 findBiggestFraction(1/2, 3/4);
+
+function findBiggestFraction(a, b) {
+    var result;
+    a>b ? result = ["firstFraction ", a] :  result = ["secondFraction", b];
+    return result;
+}
+
+var firstFraction = 3/4;
+var secondFraction = 5/7;
+
+var fractionResult = findBiggestFraction(firstFraction, secondFraction);
+console.log("First fraction result: " firstFraction);
+console.log("SecondFirst fraction result: " secondFraction);
+console.log("Fraction " + fractionResult[0] + " with a value of " + fracionResult[1] + " is the biggest!");
