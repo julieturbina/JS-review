@@ -27,7 +27,7 @@ var date = new Date();
             //true
 var a = 5;
 var b = 5;
-var theNumbersMatch
+var theNumbersMatch;
 
 if ( a == b ) {
     theNumbersMatch = true;
@@ -40,7 +40,7 @@ console.log(theNumbersMatch);
             //false
 var a = 5;
 var b = 4;
-var theNumbersMatch
+var theNumbersMatch;
 
 if ( a == b ) {
     theNumbersMatch = true;
@@ -54,7 +54,7 @@ console.log(theNumbersMatch);
 
 var a = 5;
 var b = "5";
-var theNumbersMatch
+var theNumbersMatch;
 
 if ( a == b ) {
     theNumbersMatch = true;
@@ -67,7 +67,7 @@ console.log(theNumbersMatch);
             //strict equality = false (number and string)
 var a = 5;
 var b = "5";
-var theNumbersMatch
+var theNumbersMatch;
             
 if ( a === b ) {
     theNumbersMatch = true;
@@ -79,7 +79,7 @@ if ( a === b ) {
                 // not equal BANG
     var a = 5;
     var b = 3;
-    var theNumbersMatch
+    var theNumbersMatch;
                 
     if ( a != b ) {
         theNumbersMatch = true;
@@ -91,7 +91,7 @@ if ( a === b ) {
             // not equal strict equality BANG
 var a = 5;
 var b = "5";
-var theNumbersMatch
+var theNumbersMatch;
                     
 if ( a !== b ) {
     theNumbersMatch = true;
@@ -183,3 +183,78 @@ console.log("String from array: ", arrayString);
 
 // MDN documentation for Array:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+
+
+// FUNCTIONS AND OBJECTS
+
+// FUNCTIONS: MINI PROGRAMS
+//three types of functions: 
+// 1. named functions,:executed when called by name, 
+// 2. anonymous functions: typically run once they are triggered by a specific event
+// 3. immediately invoked function expressions:  run the moment the browser encounters them.
+
+
+
+// 1. named function
+function multiply (a, b)
+{
+    // code goes here
+    var result = a * b;
+    console.log(result);
+    return result;
+}
+var multipliedNumber = multiply (7, 8);
+
+
+function multiply2() {
+    var result = 3 * 4;
+    console.log("3 multiplied by 4 is ", result);
+}
+multiply2();
+
+// Anonymous functions don't have a name, so the parentheses 
+// appears right after function. stored in variable.
+// Invoked by calling the variable as a function:
+var divided = function() {
+    var result = 3 / 4;
+    console.log("3 divided by 4 is ", result);
+};
+divided();
+
+// Immediately Invoked Function Expression.
+// Runs as soon as the browser finds it:
+function divide() {
+    var result = 12 / 0.75;
+    console.log("12 divided by 0.75 is ", result);
+}
+divide();
+
+//Basis function
+
+// function findBiggestFraction() {
+//     console.log("The function is running!");
+// }
+// findBiggestFraction();
+
+function findBiggestFraction(a, b) {
+    a>b ? console.log("a: ", a) : console.log("b: ", b);
+}
+
+var a = 3/4;
+var b = 5/7;
+
+findBiggestFraction(a, b);
+
+
+function findBiggestFraction(a, b) {
+    a>b ? console.log("a: ", a) : console.log("b: ", b);
+}
+
+var firstFraction = 3/4;
+var secondFraction = 5/7;
+
+findBiggestFraction(firstFraction, secondFraction);
+findBiggestFraction(2/3, 1/4);
+findBiggestFraction(7/16, 13/25);
+findBiggestFraction(1/2, 3/4);
