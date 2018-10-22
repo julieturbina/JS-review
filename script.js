@@ -269,6 +269,88 @@ var firstFraction = 3/4;
 var secondFraction = 5/7;
 
 var fractionResult = findBiggestFraction(firstFraction, secondFraction);
-console.log("First fraction result: " firstFraction);
-console.log("SecondFirst fraction result: " secondFraction);
-console.log("Fraction " + fractionResult[0] + " with a value of " + fracionResult[1] + " is the biggest!");
+console.log(fractionResult);
+console.log("First fraction result: ", firstFraction);
+console.log("SecondFirst fraction result: ", secondFraction);
+console.log("Fraction " + fractionResult[0] + "with a value of " + fractionResult[1] + " is the biggest!");
+
+
+var theBiggest = function(a,b) {
+    var result;
+    a>b ? result = ["a", a] : result = ["b", b];
+    return result;
+};
+
+console.log(theBiggest);      //console log out the variable itself, you
+                             // get the function itself, not the result. 
+console.log(theBiggest(7/9,13/25));
+console.log(theBiggest(13/25,7/9));
+
+//To populate the variable with the result of an anonymous function,
+//use an immediately invoked function expression that runs as soon as the browser encounters it
+//First, wrap our entire anonymous function in parenthesis. Then, invoke the function by adding a set of parenthesis at the end. place the arguments inside the new set of parenthesis. Cut them out, and paste them in. Now when the script is read from the top down, the browser says, "Hey, here is a variable, "and inside the variable we have an "immediately invoked function expression, "so it runs the function right now, "with these arguments, and return "the result back into the variable." That means, now we can console log out just theBiggest, and get the result.
+var theBiggest = (function(a,b) {
+    var result;
+    a>b ? result = ["a", a] : result = ["b", b];
+    return result;
+})(7/9,13/25);
+
+console.log(theBiggest);
+
+
+var firstFraction = 3/4;
+var secondFraction = 5/7;
+
+var theBiggest = (function(a,b) {
+    var result;
+    a>b ? result = ["a", a] : result = ["b", b];
+    return result;
+})(firstFraction, secondFraction);
+
+
+console.log(theBiggest);
+
+var a = 5/7;
+var b = 18/25;
+
+var theBiggest = function () {
+    var result;
+    a>b ? result = ["a", a] : result = ["b", b];
+    console.log(result);
+};
+
+theBiggest();
+
+//Anonymous functions
+
+var a = 3/4;
+var b = 5/7;
+
+var theBiggest = function () {
+    var result;
+    a>b ? result = ["a", a] : result = ["b", b];
+    console.log(result);
+};
+
+theBiggest();
+
+var a = 3/4;
+var b = 5/7;
+
+var theBiggest = function (a, b) {
+    var result;
+    a>b ? result = ["a", a] : result = ["b", b];
+    return result;
+};
+
+console.log(theBiggest(7/9,13/25));
+
+//above works same as below
+
+var theBiggest = function (a, b) {
+    var result;
+    a>b ? result = ["a", a] : result = ["b", b];
+    return result;
+};
+
+console.log(theBiggest(7/9,13/25));
